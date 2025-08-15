@@ -18,6 +18,8 @@ services:
       MYSQL_DATABASE: my_database
       MYSQL_USER: user
       MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"   # Host port 3307 → Container port 3306
     # Removed "ports" mapping so it won't conflict with local MySQL
     volumes:
       - db_data:/var/lib/mysql
